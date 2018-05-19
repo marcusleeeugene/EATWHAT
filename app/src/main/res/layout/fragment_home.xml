@@ -1,0 +1,147 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:design="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/HomeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context="com.example.marcus.eatwhat.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/milkywaybg">
+
+            <ImageView
+                android:id="@+id/colourwheel"
+                android:layout_width="354dp"
+                android:layout_height="326dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.394"
+                app:srcCompat="@mipmap/colourwheel" />
+
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.242"
+                tools:layout_constraintLeft_creator="1"
+                tools:layout_constraintRight_creator="1"
+                tools:layout_constraintTop_creator="1" />
+
+            <ImageView
+                android:id="@+id/imagebox"
+                android:layout_width="215dp"
+                android:layout_height="169dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.442"
+                app:srcCompat="@mipmap/ic_launcher"
+                tools:layout_constraintBottom_creator="1"
+                tools:layout_constraintLeft_creator="1"
+                tools:layout_constraintRight_creator="1" />
+
+            <Button
+                android:id="@+id/btnpromo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Promo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.678" />
+
+            <Button
+                android:id="@+id/btnspin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SPIN"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.878" />
+
+            <ImageView
+                android:id="@+id/trianglepointer"
+                android:layout_width="36dp"
+                android:layout_height="111dp"
+                android:rotation="180"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.125"
+                app:srcCompat="@mipmap/trianglepointer" />
+
+            <LinearLayout
+                android:id="@+id/promoad"
+                android:layout_width="255dp"
+                android:layout_height="385dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.351"></LinearLayout>
+
+            <Button
+                android:id="@+id/btnclosead"
+                android:layout_width="32dp"
+                android:layout_height="33dp"
+                android:layout_alignRight="@+id/promoad"
+                android:layout_alignTop="@+id/promoad"
+                android:background="@mipmap/btnclose"
+                app:layout_constraintBottom_toTopOf="@+id/colourwheel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.878"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/adView"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>

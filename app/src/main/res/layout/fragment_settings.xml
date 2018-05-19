@@ -1,0 +1,301 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:design="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/SettingsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/milkywaybg"
+    android:orientation="vertical"
+    tools:context="com.example.marcus.eatwhat.SettingsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btmmenunav"
+        android:fillViewport="false">
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context="com.example.marcus.eatwhat.SettingsFragment">
+
+            <ImageView
+                android:id="@+id/profileimage"
+                android:layout_width="170dp"
+                android:layout_height="159dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/com_facebook_profile_picture_blank_square"
+                app:layout_constraintBottom_toTopOf="@+id/profilename"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/profilename"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="196dp"
+                android:text="Marcus Lee"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/lineseparation1"
+                android:layout_width="fill_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profilename" />
+
+            <TextView
+                android:id="@+id/tblocation"
+                android:layout_width="94dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Location"
+                android:textColor="@color/com_facebook_button_background_color_focused"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profilename" />
+
+            <CheckBox
+                android:id="@+id/cbnorth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:text="North"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/cbsouth"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tblocation" />
+
+            <CheckBox
+                android:id="@+id/cbsouth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="South"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/cbeast"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cbnorth"
+                app:layout_constraintTop_toBottomOf="@+id/tblocation" />
+
+            <CheckBox
+                android:id="@+id/cbeast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="East"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/cbwest"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cbsouth"
+                app:layout_constraintTop_toBottomOf="@+id/tblocation" />
+
+            <CheckBox
+                android:id="@+id/cbwest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="West"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cbeast"
+                app:layout_constraintTop_toBottomOf="@+id/tblocation" />
+
+            <View
+                android:id="@+id/lineseparation2"
+                android:layout_width="fill_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="96dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lineseparation1" />
+
+            <TextView
+                android:id="@+id/tbtype"
+                android:layout_width="60dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="12dp"
+                android:text="Type"
+                android:textColor="@color/com_facebook_button_background_color_focused"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/lineseparation2" />
+
+            <CheckBox
+                android:id="@+id/cbchinese"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Chinese"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/cbmalay"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tbtype" />
+
+            <CheckBox
+                android:id="@+id/cbmalay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Malay"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/cbindian"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cbchinese"
+                app:layout_constraintTop_toBottomOf="@+id/tbtype" />
+
+            <CheckBox
+                android:id="@+id/cbindian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Indian"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cbmalay"
+                app:layout_constraintTop_toBottomOf="@+id/tbtype" />
+
+            <CheckBox
+                android:id="@+id/cbwestern"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="84dp"
+                android:text="Western"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/cbfastfood"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cbjapanese"
+                app:layout_constraintTop_toBottomOf="@+id/lineseparation2"
+                app:layout_constraintVertical_bias="0.067" />
+
+            <CheckBox
+                android:id="@+id/cbjapanese"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="84dp"
+                android:text="Japanese"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/cbwestern"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lineseparation2"
+                app:layout_constraintVertical_bias="0.067" />
+
+            <CheckBox
+                android:id="@+id/cbfastfood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="84dp"
+                android:text="Fast Food"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cbwestern"
+                app:layout_constraintTop_toBottomOf="@+id/lineseparation2"
+                app:layout_constraintVertical_bias="0.067" />
+
+            <View
+                android:id="@+id/lineseparation3"
+                android:layout_width="fill_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="129dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lineseparation2" />
+
+            <Button
+                android:id="@+id/btnfblogout"
+                android:layout_width="261dp"
+                android:layout_height="32dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="604dp"
+                android:background="@drawable/buttonshape"
+                android:backgroundTint="@color/com_facebook_blue"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:text="Log out"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.505"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/btmmenunav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#f1f1f1"
+        design:menu="@menu/bottom_nav_items"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+    </android.support.design.widget.BottomNavigationView>
+
+</RelativeLayout>
+
